@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [Unreleased] - ReleaseDate
+
+### Fixed
+
+- Relaxed lifetime requirements for `FdSet::{insert, remove, contains}`.
+  ([#2135](https://github.com/nix-rust/nix/pull/2135))
+
 ## [0.27.1] - 2023-08-28
 
 ### Fixed
