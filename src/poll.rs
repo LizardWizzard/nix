@@ -36,7 +36,7 @@ impl<'fd> PollFd<'fd> {
     //
     // // Do something with `pollfd`, which uses the CLOSED fd.
     // ```
-    pub fn new<Fd: AsFd>(fd: &'fd Fd, events: PollFlags) -> PollFd<'fd> {
+    pub fn new<Fd: AsFd + 'fd>(fd: Fd, events: PollFlags) -> PollFd<'fd> {
         PollFd {
             pollfd: libc::pollfd {
                 fd: fd.as_fd().as_raw_fd(),
